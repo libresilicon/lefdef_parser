@@ -9,9 +9,10 @@ lefdef parser implementation
     * [x] grammer defined and tested
     * [ ] setting up c++ datastructures
     * [ ] populating a database struct with the parsed lef (visitor functions)    
-* [ ] lef
+* [ ] def
     * [x] extract def rules from ref manual
-    * [ ] grammer defined and tested
+    * [x] grammer defined
+        * [ ] and tested (a lot of rules are still broken)
     * [ ] setting up c++ datastructures
     * [ ] populating a database struct with the parsed def (visitor functions)
 
@@ -20,6 +21,7 @@ lefdef parser implementation
 ```bash
 cd tests
 bash lef_grammer_test.sh
+bash def_grammer_test.sh
 ```
 
 ## Requirements

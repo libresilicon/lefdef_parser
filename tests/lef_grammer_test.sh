@@ -2,8 +2,8 @@ R='\033[0;31m'
 G='\033[0;32m'
 NC='\033[0m' # No Color
 #gen test grammer
-antlr4 $PWD/../grammer/lef.g4 -o grammer/
-cd grammer
+antlr4 $PWD/../grammer/lef.g4 -o lef_grammer/
+cd lef_grammer
 javac *.java
 #test sub rules
 keywords="layer via viarule macro"
@@ -24,6 +24,9 @@ for k in $keywords; do
     done
 done
 
+###
+#Two bigger testfiles
+###
 eval "$( ( cat ../lefref.lef | grun lef lef -tree ) \
       2> >(t_err=$(cat); typeset -p t_err) \
        > >(t_std=$(cat); typeset -p t_std) )"

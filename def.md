@@ -56,7 +56,9 @@ DESIGN designName ;
 
 ## PROPERTYDEFINITIONS
 
-[PROPERTYDEFINITIONS [objectType propName propType [RANGE min max] [value | stringValue] ;] ... END PROPERTYDEFINITIONS]
+[PROPERTYDEFINITIONS
+[objectType propName propType [RANGE min max] [value | stringValue] ;] ...
+END PROPERTYDEFINITIONS]
 
 ## DIEAREA
 
@@ -80,30 +82,24 @@ DESIGN designName ;
 ## VIAS
 
 [VIAS numVias ;
- [– viaName [ + VIARULE viaRuleName + CUTSIZE xSize ySize + LAYERS botmetalLayer cutLayer topMetalLayer + CUTSPACING xCutSpacing yCutSpacing + ENCLOSURE xBotEnc yBotEnc xTopEnc yTopEnc
-[+ ROWCOL numCutRows NumCutCols]
- [+ ORIGIN xOffset yOffset]
- [+ OFFSET xBotOffset yBotOffset xTopOffset yTopOffset]
- [+ PATTERN cutPattern]
- ]
- | [ + RECT layerName [+ MASK maskNum]
- pt pt | + POLYGON layerName [+ MASK maskNum]
- pt pt pt]
- ...
-]
- ;
-]
- ...
+  [– viaName
+     [ + VIARULE viaRuleName + CUTSIZE xSize ySize + LAYERS botmetalLayer cutLayer topMetalLayer + CUTSPACING xCutSpacing yCutSpacing + ENCLOSURE xBotEnc yBotEnc xTopEnc yTopEnc
+         [+ ROWCOL numCutRows NumCutCols]
+         [+ ORIGIN xOffset yOffset]
+         [+ OFFSET xBotOffset yBotOffset xTopOffset yTopOffset]
+         [+ PATTERN cutPattern]
+     ]
+     | [ + RECT layerName [+ MASK maskNum] pt pt
+     | + POLYGON layerName [+ MASK maskNum] pt pt pt] ...
+  ];]...
  END VIAS]
 
 
 ## STYLES
 
 [STYLES numStyles ;
- {- STYLE styleNum pt pt ...
- ;
-} ...
- END STYLES]
+    {- STYLE styleNum pt pt ... ;} ...
+END STYLES]
 
 
 ## NONDEFAULTRULES
