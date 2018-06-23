@@ -8,13 +8,19 @@ lefdef parser implementation
     * [x] extract lef rules from ref manual
     * [x] grammer defined and tested
     * [ ] setting up c++ datastructures
-    * [ ] populating a database struct with the parsed lef (visitor functions)    
+      * [x] pasted motifed qtflow datastructures
+      * [ ] enhance datastructures and put them in database object
+      * [ ] setup cmake
+    * [ ] populating the database struct with the parsed lef (visitor functions)    
 * [ ] def
     * [x] extract def rules from ref manual
     * [x] grammer defined
         * [ ] and tested (a lot of rules are still broken)
     * [ ] setting up c++ datastructures
-    * [ ] populating a database struct with the parsed def (visitor functions)
+      * [x] pasted motifed qtflow datastructures
+      * [ ] enhance datastructures and put them in database object
+      * [ ] setup cmake
+    * [ ] populating the database struct with the parsed def (visitor functions)
 
 ## Test
 
