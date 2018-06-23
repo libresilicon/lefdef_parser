@@ -9,7 +9,7 @@ javac *.java
 keywords="layer via viarule macro"
 #loop over all files for each subrule
 
-for file in ../defref.def ../ispd18_test1.def ; do
+for file in ../defref.def ../ispd18_test1.def ../def/*.def ; do
   unset t_std t_err
   #redirect stdout and stderr to vars
   eval "$( ( cat $file | grun def def -tree ) \

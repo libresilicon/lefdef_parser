@@ -16,10 +16,10 @@ Comment: '#'.*?'\n' -> channel(HIDDEN);
 RECT:                       R E C T;
 POLYGON:                    P O L Y G O N;
 
+ORIENTATION: (N|E|S|W|(F N)|(F E)|(F S)|(F W));
 NUMBER: (INT | FLOAT) ;
 IDSTRING:  [a-zA-Z_] [a-zA-Z0-9_]*;
 STRING : '"' ( '\\"' | . )*? '"' ;
-ORIENTATION: (N|E|S|W|(F N)|(F E)|(F S)|(F W));
 OXIDE:                      O X I D E [1-4];
 CORE: C O R E;
 

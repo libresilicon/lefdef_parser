@@ -46,7 +46,7 @@ dividerchar: DIVIDERCHAR STRING sem;
 busbitchars: BUSBITCHARS STRING sem;
 design: DESIGN id sem;
 rows: ROW rowName=id siteName=id origX=num origY=num siteOrient=ORIENTATION
-      (DO numX=num BY numY=num (STEP stepX=num stepY=num)?)? property sem;
+      (DO numX=num BY numY=num (STEP stepX=num stepY=num)?)? property? sem;
 diearea: DIEAREA point point+ sem;
 history: HISTORY .*? sem;
 tracks: TRACKS ((X_CORD | Y_CORD) start=num DO numtracks=num STEP space=num (MASK maskNum=num (SAMEMASK)?)? (LAYER layerName=id+)? sem)+;
